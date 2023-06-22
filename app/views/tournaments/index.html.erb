@@ -1,0 +1,10 @@
+<h1>Tournament Schedule</h1>
+
+<ul>
+  <% @tournament.matches.each do |match| %>
+    <li><%= match.team1.name %> vs <%= match.team2.name %></li>
+  <% end %>
+</ul>
+
+<%= button_to "Generate Results", generate_tournaments_path, method: :post %>
+
